@@ -89,6 +89,10 @@ color: var(--verde);
 text-transform: uppercase;
 }
 
+.contador{
+    fonte-size: 20px;
+    text-align: center;
+}
 
 
 
