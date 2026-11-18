@@ -20,7 +20,7 @@ const tempoObjetivo2 = new Date("2026-12-18T00:00:00");
 const tempoObjetivo3 = new Date("2026-12-18T00:00:00");
 const tempoObjetivo4 = new Date("2026-12-18T00:00:00");
 
-const tempos = [tempoObjetivo1,tempoObjetivo2,tempoObjetivo3,tempoObjetivo4];
+const tempos = [tempoObjetivo1, tempoObjetivo2, tempoObjetivo3, tempoObjetivo4];
 
 function calculaTempo(tempoObjetivo) {
     let tempoAtual = new Date();
@@ -41,4 +41,18 @@ function calculaTempo(tempoObjetivo) {
 
 
 
-contadores[0].textContent = calculaTempo(tempoObjetivo1);
+function atualizaCronometro() {
+    for (let i = 0; i < contadores.length; i++) {
+        contadores[i].textContent = calculaTempo(tempos[i]);
+
+    }
+}
+
+
+function comecaCronometro(){
+    atualizaCronometro();
+    setInterval(atualizaCronometro,  1000)
+
+}
+
+comecaCronometro();
